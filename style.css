@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,75 +6,155 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
   }
-
-  img, iframe {
-    max-width: 100%;
-    height: auto;
+  
+  a {
+    text-decoration: none;
+    color: inherit;
   }
   
-  
+  /* Header */
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background: #f4f4f4;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #3a3a3a;
   }
   
   nav a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: #333;
+    margin-left: 1.5rem;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
   }
   
+  nav a:hover {
+    color: #0077cc;
+  }
+  
+  /* Hero Section */
   .hero {
-    
-    background-color: #ccc;
+    background: linear-gradient(135deg, #cce5ff, #e0f7ff);
+    padding: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  
+  .hero .media {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  /* Bio Section */
+  .bio {
+    display: flex;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    background: #ffffff;
+    flex-wrap: wrap;
+  }
+  
+  .bio-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .bio-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0077cc;
+  }
+  
+  .bio-text p {
+    margin-bottom: 1rem;
+  }
+  
+  .bio-image {
+    flex: 0 0 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .bio {
-    display: flex;
-    padding: 2rem;
-    gap: 2rem;
+  .bio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
   }
   
-  .logo-image {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: #ddd;
-  }
-
-  .bio-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #ddd;
-  }
-  
+  /* Footer */
   footer {
-    padding: 1rem;
-    background: #222;
+    padding: 2rem;
+    background: #0077cc;
     color: #fff;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
   }
   
   .social-icons span {
-    margin: 0 0.5rem;
+    margin-right: 1rem;
+    background: #ffffff22;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
   }
-  /* === Mobile Styles (screens 768px and smaller) === */
-@media (max-width: 768px) {
+  
+  .social-icons span:hover {
+    background: #ffffff55;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
     header {
       flex-direction: column;
       align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 0.5rem;
     }
   
     nav a {
@@ -83,8 +164,8 @@
   
     .bio {
       flex-direction: column;
-      text-align: center;
       align-items: center;
+      text-align: center;
     }
   
     .bio-image {
@@ -95,11 +176,11 @@
       flex-direction: column;
       text-align: center;
     }
+  }
   
-    .footer-left,
-    .footer-center,
-    .footer-right {
-      margin-bottom: 1rem;
-    }
+  img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   
